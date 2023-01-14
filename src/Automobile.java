@@ -1,18 +1,22 @@
 public class Automobile {
-    public String brand;
-    public String model;
-    public double engineVolume;
-    public String color;
-    public int year;
-    public String country;
-
-    public Automobile(){}
+    private final String brand;
+    private final String model;
+    private final double engineVolume;
+    private final String color;
+    private final int year;
+    private final String country;
 
     public Automobile(String brand,String model, double engineVolume, String color, int year, String country){
+        if(brand==null)
+            this.brand = "default";
+        else
         if(brand.isEmpty())
             this.brand = "default";
         else
             this.brand = brand;
+        if(model==null)
+            this.model = "default";
+        else
         if(model.isEmpty())
             this.model = "default";
         else
@@ -21,6 +25,9 @@ public class Automobile {
             this.engineVolume = 1.5;
         else
             this.engineVolume = engineVolume;
+        if(color==null)
+            this.color = "default";
+        else
         if(color.isEmpty())
             this.color = "белый";
         else
@@ -29,6 +36,9 @@ public class Automobile {
             this.year = 2000;
         else
             this.year = year;
+        if(country==null)
+            this.country = "default";
+        else
         if(country.isEmpty())
             this.country = "default";
         else
